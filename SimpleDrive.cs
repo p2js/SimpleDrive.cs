@@ -13,7 +13,9 @@ public class SimpleDrive: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        /*Nothing here yet ;)
+	Depending on what we do for the handling model, there may be some code here, so we're leaving this untouched for now.*/
+	
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class SimpleDrive: MonoBehaviour
 		horizontalInput = Input.GetAxis("Horizontal");
 		forwardInput = Input.GetAxis("Vertical");
 		
-        //Drive and turn the car based from input gathered above
+        	//Drive and turn the car based from input gathered above
 		transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
 		transform.Rotate(Vector3.up, turn * horizontalInput * Time.deltaTime);
     }
