@@ -27,6 +27,8 @@ public class SimpleDrive: MonoBehaviour
 		
         	//Drive and turn the car based from input gathered above
 		transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-		transform.Rotate(Vector3.up, turn * horizontalInput * Time.deltaTime);
+		if(forwardInput != 0) { //Makes it so car cannot turn when speed is 0.
+			 transform.Rotate(Vector3.up, turn * horizontalInput * Time.deltaTime);
+		}
     }
 }
